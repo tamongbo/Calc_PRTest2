@@ -20,7 +20,9 @@ public:
 	}
 	
 	int getDivide(int a, int b) {
-		return 0;
+		if (b == 0)
+			throw invalid_argument("no zero");
+		return a / b;
 	}
 	
 	int getSumSum(int op1, int op2, int op3) {
