@@ -7,8 +7,14 @@ TEST(TestCaseName, TestName) {
 	EXPECT_TRUE(true);
 }
 
-TEST(CalcTest, getSumSumTest) {
+TEST(CalcTest, getSumSumPositiveNumTest) {
 	Calc c;
 
 	EXPECT_EQ(6, c.getSumSum(1, 2, 3));
+}
+
+TEST(CalcTest, getSumSumNegativeNumTest) {
+	Calc c;
+
+	EXPECT_EQ(-6, c.getSumSum(-1, -2, -3));
 }
