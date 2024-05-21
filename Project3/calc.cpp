@@ -23,7 +23,7 @@ public:
 		return 0;
 	}
 	
-	int getSumSum(int a, int b, int c) {
-		return 0;
+	int getSumSum(int op1, int op2, int op3) {
+		return op1 + op2 + op3;
 	}
 };
