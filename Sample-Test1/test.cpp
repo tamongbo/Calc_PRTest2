@@ -1,6 +1,7 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "../Project3/calc.cpp"
+using namespace testing;
 
 TEST(CalculatorTest, MinusTest) {
 	Calc calc;
@@ -31,6 +32,16 @@ TEST(CalcTest, getSumSumNegativeNumTest) {
 	EXPECT_EQ(-6, c.getSumSum(-1, -2, -3));
 }
 
+TEST(CalcTest, GetGopCorrectTest) {
+	Calc calc;
+	EXPECT_EQ(calc.getGop(2, 3),6);
+}
+
+TEST(CalcTest, GetGopIncorrectTest) {
+	Calc calc;
+	EXPECT_THAT(calc.getGop(2, 0), Ne(2));
+}
+
 TEST(TestCal, getZegopTest) {
 	Calc calc;
 	EXPECT_EQ(1, calc.getZegop(1));
@@ -39,3 +50,4 @@ TEST(TestCal, getZegopTest) {
 	EXPECT_EQ(16, calc.getZegop(4));
 	EXPECT_EQ(25, calc.getZegop(5));
 }
+
