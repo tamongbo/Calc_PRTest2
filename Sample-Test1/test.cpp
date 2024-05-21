@@ -3,10 +3,13 @@
 #include "../Project3/calc.cpp"
 using namespace testing;
 
-TEST(TestCaseName, TestName) {
-	EXPECT_EQ(1, 1);
-	EXPECT_TRUE(true);
+TEST(CalculatorTest, MinusTest) {
+	Calc calc;
+	EXPECT_EQ(0, calc.getMinus(1, 1));
+	EXPECT_EQ(1, calc.getMinus(2, 1));
+	EXPECT_EQ(-1, calc.getMinus(1, 2));
 }
+
 TEST(TestCaseName, getSumPositiveNumber) {
 	Calc calc;
 	EXPECT_EQ(3, calc.getSum(1, 2));
